@@ -12,6 +12,15 @@
 		17063F651F251E2900E3EB80 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17063F631F251E2900E3EB80 /* Main.storyboard */; };
 		17063F671F251E2900E3EB80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17063F661F251E2900E3EB80 /* Assets.xcassets */; };
 		17063F6A1F251E2900E3EB80 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17063F681F251E2900E3EB80 /* LaunchScreen.storyboard */; };
+		17B7939B1F251F08007F996A /* KZCollectionItemSizeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B793931F251E83007F996A /* KZCollectionItemSizeCache.swift */; };
+		17B7939C1F251F08007F996A /* KZSizePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B793941F251E83007F996A /* KZSizePersistence.swift */; };
+		17B7939D1F251F08007F996A /* KZSizingItemType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B793951F251E83007F996A /* KZSizingItemType.swift */; };
+		17B7939E1F251F08007F996A /* KZViewHeightCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B793961F251E83007F996A /* KZViewHeightCalculator.swift */; };
+		17B7939F1F251F08007F996A /* KZViewSizeCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B793971F251E83007F996A /* KZViewSizeCache.swift */; };
+		17B793A01F251F08007F996A /* KZViewWithContentViewType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B793981F251E83007F996A /* KZViewWithContentViewType.swift */; };
+		17B793A11F251F08007F996A /* UICollectionView+RegisteringCellHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B7939A1F251E83007F996A /* UICollectionView+RegisteringCellHelpers.swift */; };
+		17B793A41F251F34007F996A /* StringCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B793A31F251F1F007F996A /* StringCell.swift */; };
+		17B793A51F251F34007F996A /* StringCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 17B793A21F251F1F007F996A /* StringCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +31,16 @@
 		17063F661F251E2900E3EB80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17063F691F251E2900E3EB80 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		17063F6B1F251E2900E3EB80 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		17B793931F251E83007F996A /* KZCollectionItemSizeCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZCollectionItemSizeCache.swift; sourceTree = "<group>"; };
+		17B793941F251E83007F996A /* KZSizePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZSizePersistence.swift; sourceTree = "<group>"; };
+		17B793951F251E83007F996A /* KZSizingItemType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZSizingItemType.swift; sourceTree = "<group>"; };
+		17B793961F251E83007F996A /* KZViewHeightCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZViewHeightCalculator.swift; sourceTree = "<group>"; };
+		17B793971F251E83007F996A /* KZViewSizeCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZViewSizeCache.swift; sourceTree = "<group>"; };
+		17B793981F251E83007F996A /* KZViewWithContentViewType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KZViewWithContentViewType.swift; sourceTree = "<group>"; };
+		17B793991F251E83007F996A /* LICENCE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE; sourceTree = "<group>"; };
+		17B7939A1F251E83007F996A /* UICollectionView+RegisteringCellHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+RegisteringCellHelpers.swift"; sourceTree = "<group>"; };
+		17B793A21F251F1F007F996A /* StringCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StringCell.xib; sourceTree = "<group>"; };
+		17B793A31F251F1F007F996A /* StringCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,12 +73,38 @@
 		17063F5E1F251E2900E3EB80 /* KZViewSizeCache */ = {
 			isa = PBXGroup;
 			children = (
+				17B793921F251E83007F996A /* KZViewSizeCache */,
+				17063F711F251E3200E3EB80 /* Example */,
+			);
+			path = KZViewSizeCache;
+			sourceTree = "<group>";
+		};
+		17063F711F251E3200E3EB80 /* Example */ = {
+			isa = PBXGroup;
+			children = (
 				17063F5F1F251E2900E3EB80 /* AppDelegate.swift */,
 				17063F611F251E2900E3EB80 /* ViewController.swift */,
+				17B793A31F251F1F007F996A /* StringCell.swift */,
+				17B793A21F251F1F007F996A /* StringCell.xib */,
 				17063F631F251E2900E3EB80 /* Main.storyboard */,
 				17063F661F251E2900E3EB80 /* Assets.xcassets */,
 				17063F681F251E2900E3EB80 /* LaunchScreen.storyboard */,
 				17063F6B1F251E2900E3EB80 /* Info.plist */,
+			);
+			name = Example;
+			sourceTree = "<group>";
+		};
+		17B793921F251E83007F996A /* KZViewSizeCache */ = {
+			isa = PBXGroup;
+			children = (
+				17B793931F251E83007F996A /* KZCollectionItemSizeCache.swift */,
+				17B793941F251E83007F996A /* KZSizePersistence.swift */,
+				17B793951F251E83007F996A /* KZSizingItemType.swift */,
+				17B793961F251E83007F996A /* KZViewHeightCalculator.swift */,
+				17B793971F251E83007F996A /* KZViewSizeCache.swift */,
+				17B793981F251E83007F996A /* KZViewWithContentViewType.swift */,
+				17B793991F251E83007F996A /* LICENCE */,
+				17B7939A1F251E83007F996A /* UICollectionView+RegisteringCellHelpers.swift */,
 			);
 			path = KZViewSizeCache;
 			sourceTree = "<group>";
@@ -124,6 +169,7 @@
 			files = (
 				17063F6A1F251E2900E3EB80 /* LaunchScreen.storyboard in Resources */,
 				17063F671F251E2900E3EB80 /* Assets.xcassets in Resources */,
+				17B793A51F251F34007F996A /* StringCell.xib in Resources */,
 				17063F651F251E2900E3EB80 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -135,8 +181,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17B7939E1F251F08007F996A /* KZViewHeightCalculator.swift in Sources */,
+				17B7939B1F251F08007F996A /* KZCollectionItemSizeCache.swift in Sources */,
+				17B793A41F251F34007F996A /* StringCell.swift in Sources */,
+				17B7939D1F251F08007F996A /* KZSizingItemType.swift in Sources */,
 				17063F621F251E2900E3EB80 /* ViewController.swift in Sources */,
 				17063F601F251E2900E3EB80 /* AppDelegate.swift in Sources */,
+				17B793A11F251F08007F996A /* UICollectionView+RegisteringCellHelpers.swift in Sources */,
+				17B7939F1F251F08007F996A /* KZViewSizeCache.swift in Sources */,
+				17B793A01F251F08007F996A /* KZViewWithContentViewType.swift in Sources */,
+				17B7939C1F251F08007F996A /* KZSizePersistence.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -210,7 +264,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -261,7 +315,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -275,6 +329,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WM5VQQ9GA7;
 				INFOPLIST_FILE = KZViewSizeCache/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KZ.KZViewSizeCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -289,6 +344,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = WM5VQQ9GA7;
 				INFOPLIST_FILE = KZViewSizeCache/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = KZ.KZViewSizeCache;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -316,6 +372,7 @@
 				17063F701F251E2900E3EB80 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
