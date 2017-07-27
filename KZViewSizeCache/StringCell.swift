@@ -8,8 +8,12 @@
 
 import UIKit
 
-class StringCell: UICollectionViewCell {
+class StringCell: UICollectionViewCell, KZSizingItem {
     @IBOutlet weak var lblString: UILabel!
+
+    var additionalHeight: CGFloat {
+        return 70
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

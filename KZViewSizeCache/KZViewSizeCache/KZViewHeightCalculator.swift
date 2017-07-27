@@ -9,7 +9,7 @@
 import UIKit
 
 class KZViewHeightCalculator {
-    typealias ViewType = UIView
+    typealias ViewType = UIView & KZSizingItem
 
     let view: ViewType
     let viewWidthConstraint: NSLayoutConstraint
@@ -18,12 +18,7 @@ class KZViewHeightCalculator {
 
     init(view: ViewType) {
         self.view = view
-
-        if let view = view as? KZViewWithContentViewType {
-            sizingView = view.contentView
-        } else {
-            sizingView = view
-        }
+        self.sizingView = view.sizingView
 
         view.translatesAutoresizingMaskIntoConstraints = false
         if !view.autoresizingMask.contains([.flexibleHeight, .flexibleWidth]) {
@@ -56,6 +51,7 @@ class KZViewHeightCalculator {
         view.layoutIfNeeded()
 
         var itemHeight = sizingView.systemLayoutSizeFitting(UILayoutFittingCompressedSize).height
+        itemHeight += view.additionalHeight
         if heightRoundUp {
             itemHeight = ceil(itemHeight)
         }

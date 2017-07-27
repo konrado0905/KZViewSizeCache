@@ -16,6 +16,8 @@ protocol KZCollectionItemSizeCacheDelegate: class {
 }
 
 class KZCollectionItemSizeCache {
+    typealias ViewType = UIView & KZSizingItem
+
     let type: KZSizingItemType
     weak var delegate: KZCollectionItemSizeCacheDelegate?
 
@@ -25,14 +27,15 @@ class KZCollectionItemSizeCache {
     convenience init?(sizingItemFromNibNamed nibName: String, andType type: KZSizingItemType) {
         guard let sizingItem = Bundle.main.loadNibNamed(nibName,
                                                         owner: nil,
-                                                        options: nil)?.first as? UIView else {
+                                                        options: nil)?.first as? ViewType else {
+                                                            // TODO: Assert on type check
                                                             return nil
         }
 
         self.init(sizingItem: sizingItem, type: type)
     }
 
-    init(sizingItem: UIView, type: KZSizingItemType) {
+    init(sizingItem: ViewType, type: KZSizingItemType) {
         self.type = type
         self.viewSizeCache = KZViewSizeCache(view: sizingItem)
 

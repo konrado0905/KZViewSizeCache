@@ -13,7 +13,7 @@ protocol KZViewSizeCacheDelegate: class {
 }
 
 class KZViewSizeCache {
-    typealias ViewType = UIView
+    typealias ViewType = UIView & KZSizingItem
 
     weak var delegate: KZViewSizeCacheDelegate?
 
